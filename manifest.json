@@ -1,30 +1,25 @@
 {
-    "name": "Mouse Cursor",
-    "version": "2.2.0",
-    "namespace": "Manlaan.MouseCursor",
-    "package": "MouseCursor.dll",
+    "name": "Hamster Pointer",
+    "version": "1.0.0",
+    "namespace": "ArkSoil.HamsterPointer",
+    "package": "HamsterPointer.dll",
     "manifest_version": 1,
 
     "description": "Displays a custom image under your mouse pointer.",
     "dependencies": {
         "bh.blishhud": ">=0.11.4"
     },
-    "url": "https://github.com/manlaan/BlishHud-MouseCursor",
+    "url": "https://github.com/ArkSoil/BlishHud-HamsterPointer",
     "contributors": [
         {
-            "name": "Manlaan",
-            "username": "manlaan.8921"
-        },
-        {
-            "name": "Nekres",
-            "username": "Nekres.1038"
+            "name": "ArkSoil",
+            "username": "ArkSoil.1968"
         }
     ],
-    "directories": [ "mousecursor" ]
+    "directories": [ "hamsterpointer" ]
 }
 /*
     "changelog": {
-        "2.2.0": "2022-01-20: Added option for Mouse during Combat"
-        "2.1.4": "2021-10-15: Upgraded to Blish 0.11.1, fix size on color picker for 11.2"
+        "1.0.0": "Forking project from https://github.com/manlaan/BlishHud-MouseCursor and adding a feature to display cursor only when moving "
     },
 */
