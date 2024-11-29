@@ -57,7 +57,7 @@ namespace Manlaan.MouseCursor
             _settingMouseCursorColor = settings.DefineSetting("MouseCursorColor", "White0");
             _settingMouseCursorSize = settings.DefineSetting("MouseCursorSize", 70, "Size", "");
             _settingMouseCursorOpacity = settings.DefineSetting("MouseCursorOpacity", 1.0f, "Opacity", "");
-            _settingMouseCursorCameraDrag = settings.DefineSetting("MouseCursorCameraDrag", false, "Show When Camera Dragging", "Shows the cursor when you move the camera.");
+            _settingMouseCursorCameraDrag = settings.DefineSetting("MouseCursorCameraDrag", false, "Show Only When Camera Dragging", "Shows the cursor only when you move the camera.");
             _settingMouseCursorAboveBlish = settings.DefineSetting("MouseCursorAboveBlish", false, "Show Above Blish Windows", "");
             _settingMouseCursorOnlyCombat = settings.DefineSetting("MouseCursorOnlyCombat", false, "Only Show During Combat", "");
 
@@ -146,7 +146,7 @@ namespace Manlaan.MouseCursor
 
         protected override void Update(GameTime gameTime)
         {
-            _mouseImg.Visible = _settingMouseCursorCameraDrag.Value || !Input.Mouse.CameraDragging;
+            _mouseImg.Visible = _settingMouseCursorCameraDrag.Value && Input.Mouse.CameraDragging;
             if (_mouseImg.Visible && _settingMouseCursorOnlyCombat.Value && !Gw2Mumble.PlayerCharacter.IsInCombat)
                 _mouseImg.Visible = false;
             if (Input.Mouse.State.RightButton != ButtonState.Pressed && _mouseImg.Visible)
